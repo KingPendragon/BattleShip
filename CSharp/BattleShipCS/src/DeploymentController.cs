@@ -13,13 +13,16 @@ namespace MyGame
 	/// </summary>
 	static class DeploymentController
 	{
+		/// <remarks>
+		/// These constants contain information about the position and
+		/// sizing of the deployment interface's elements.
+		/// <remarks>
 		private const int SHIPS_TOP = 98;
 		private const int SHIPS_LEFT = 20;
 		private const int SHIPS_HEIGHT = 90;
-
 		private const int SHIPS_WIDTH = 300;
+		
 		private const int TOP_BUTTONS_TOP = 72;
-
 		private const int TOP_BUTTONS_HEIGHT = 46;
 		private const int PLAY_BUTTON_LEFT = 693;
 
@@ -47,6 +50,17 @@ namespace MyGame
 		/// </remarks>
 		public static void HandleDeploymentInput ()
 		{
+			/// <summary>
+			/// Enforces an outcome based on which key was pressed.
+			/// <summary>
+			/// <remarks>
+			/// 'Escape' returns the player to the game menu.
+			/// 'Up' changes the ship-placing direction to vertical.
+			/// 'Left' changes the ship-placing direction to horizontal.
+			/// 'r' deploys the ships in random positions.
+			/// 'Left mouse button' performs a variety of actions related to ship placement.
+			
+			/// <remarks>
 			if (SwinGame.KeyTyped (KeyCode.vk_ESCAPE)) {
 				GameController.AddNewState (GameState.ViewingGameMenu);
 			}
