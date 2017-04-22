@@ -58,8 +58,7 @@ namespace MyGame
 			/// 'Up' changes the ship-placing direction to vertical.
 			/// 'Left' changes the ship-placing direction to horizontal.
 			/// 'r' deploys the ships in random positions.
-			/// 'Left mouse button' performs a variety of actions related to ship placement.
-			
+			/// 'Left mouse button' performs a variety of actions related to ship placement.			
 			/// <remarks>
 			if (SwinGame.KeyTyped (KeyCode.vk_ESCAPE)) {
 				GameController.AddNewState (GameState.ViewingGameMenu);
