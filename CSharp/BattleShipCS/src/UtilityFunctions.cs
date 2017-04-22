@@ -13,6 +13,10 @@ namespace MyGame
 	/// </summary>
 	static class UtilityFunctions
 	{
+		/// <remarks>
+		/// These constants contain information about the position and
+		/// sizing of various elements from the in-game screen.
+		/// <remarks>
 		public const int FIELD_TOP = 122;
 		public const int FIELD_LEFT = 349;
 		public const int FIELD_WIDTH = 418;
@@ -26,6 +30,10 @@ namespace MyGame
 		public const int CELL_GAP = 2;
 
 		public const int SHIP_GAP = 3;
+		
+		/// <remarks>
+		/// These color values dictate the colors of the in-game screen's elements.
+		/// <remarks>
 		private static readonly Color SMALL_SEA = SwinGame.RGBAColor (6, 60, 94, 255);
 		private static readonly Color SMALL_SHIP = Color.Gray;
 		private static readonly Color SMALL_MISS = SwinGame.RGBAColor (1, 147, 220, 255);
@@ -252,7 +260,11 @@ namespace MyGame
 
 			SwinGame.DrawFramerate (675, 585, GameResources.GameFont ("CourierSmall"));
 		}
-
+		
+		/// <summary>
+		/// The methods below handle drawing the various elements
+		/// of the in-game screen, such as explosions.
+		/// <summary>
 		public static void AddExplosion (int row, int col)
 		{
 			AddAnimation (row, col, "Splash");
