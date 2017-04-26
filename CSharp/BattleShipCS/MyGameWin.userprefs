@@ -7,7 +7,7 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="src\DeploymentController.cs">
     <Files>
       <File FileName="src\GameMain.cs" Line="29" Column="4" />
-      <File FileName="src\DeploymentController.cs" Line="77" Column="43" />
+      <File FileName="src\DeploymentController.cs" Line="77" Column="1" />
       <File FileName="src\Model\AIPlayer.cs" Line="17" Column="4" />
       <File FileName="src\Model\BattleShipsGame.cs" Line="24" Column="17" />
     </Files>
