@@ -19,6 +19,15 @@ namespace MyGame
 			{
 				GameController.HandleUserInput();
 				GameController.DrawScreen();
+				if (SwinGame.KeyTyped (KeyCode.vk_m)) {
+					if (GameResources.NotMuteSoundEffect) {
+						SwinGame.PauseMusic ();
+						GameResources.NotMuteSoundEffect = false;
+					} else {
+						SwinGame.ResumeMusic ();
+						GameResources.NotMuteSoundEffect = true;
+					}
+				}
 			} while (!(SwinGame.WindowCloseRequested() == true || GameController.CurrentState == GameState.Quitting));
 
 			SwinGame.StopMusic();

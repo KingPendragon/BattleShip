@@ -9,6 +9,7 @@ namespace MyGame
 {
 	public static class GameResources
 	{
+		private static bool _notmute = true;
 
 		private static void LoadFonts ()
 		{
@@ -103,13 +104,17 @@ namespace MyGame
 
 		public static SoundEffect GameSound (string sound)
 		{
-			/*return _Sounds (sound);*/
-			foreach (KeyValuePair<string, SoundEffect> kvp in _Sounds) {
-				if (kvp.Key == sound) {
-					return kvp.Value;
+			if (_notmute) {
+				/*return _Sounds (sound);*/
+				foreach (KeyValuePair<string, SoundEffect> kvp in _Sounds) {
+					if (kvp.Key == sound) {
+						return kvp.Value;
+					}
 				}
+				return null;
+			} else {
+				return null;
 			}
-			return null;
 		}
 
 		/// <summary>
@@ -341,6 +346,15 @@ namespace MyGame
 			FreeMusic();
 			FreeSounds();
 			SwinGame.ProcessEvents();
+		}
+
+		public static bool NotMuteSoundEffect {
+			get {
+				return _notmute;
+			}
+			set {
+				_notmute = value;
+			}
 		}
 	}
 }
