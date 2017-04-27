@@ -64,9 +64,9 @@ namespace MyGame
 		private static void LoadScores()
 		{
 			string filename = null;
-			filename = SwinGame.PathToResource("highscores.txt");
+            filename = SwinGame.PathToResource("highscores.txt");
 
-			StreamReader input = default(StreamReader);
+            StreamReader input = default(StreamReader);
 			input = new StreamReader(filename);
 
 			//Read in the # of scores
@@ -127,11 +127,15 @@ namespace MyGame
 			const int SCORES_HEADING = 40;
 			const int SCORES_TOP = 80;
 			const int SCORE_GAP = 30;
+            Font highScoreFont = GameResources.GameFont("Courier");
+            
 
-			if (_Scores.Count == 0)
-				LoadScores();
+            if (_Scores.Count == 0)
+            {
+                LoadScores();
+            }
 
-			SwinGame.DrawText("   High Scores   ", Color.White, "Courier", SCORES_LEFT, SCORES_HEADING);
+			SwinGame.DrawText("   High Scores   ", Color.White, highScoreFont, SCORES_LEFT, SCORES_HEADING);
 
 			//For all of the scores
 			int i = 0;
@@ -142,11 +146,11 @@ namespace MyGame
 				//for scores 1 - 9 use 01 - 09
 				if (i < 9)
 				{
-					SwinGame.DrawText(" " + (i + 1) + ":   " + s.Name + "   " + s.Value, Color.White, "Courier", SCORES_LEFT, SCORES_TOP + i * SCORE_GAP);
+					SwinGame.DrawText(" " + (i + 1) + ":   " + s.Name + "   " + s.Value, Color.White, highScoreFont, SCORES_LEFT, SCORES_TOP + i * SCORE_GAP);
 				}
 				else
 				{
-					SwinGame.DrawText(i + 1 + ":   " + s.Name + "   " + s.Value, Color.White, "Courier", SCORES_LEFT, SCORES_TOP + i * SCORE_GAP);
+					SwinGame.DrawText(i + 1 + ":   " + s.Name + "   " + s.Value, Color.White, highScoreFont, SCORES_LEFT, SCORES_TOP + i * SCORE_GAP);
 				}
 			}
 		}
