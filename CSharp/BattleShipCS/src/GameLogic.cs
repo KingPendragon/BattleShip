@@ -19,6 +19,8 @@ namespace MyGame
 			{
 				GameController.HandleUserInput();
 				GameController.DrawScreen();
+
+				//mute function
 				if (SwinGame.KeyTyped (KeyCode.vk_m)) {
 					if (GameResources.NotMuteSoundEffect) {
 						SwinGame.PauseMusic ();

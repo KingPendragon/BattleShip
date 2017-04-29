@@ -4,10 +4,10 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="src\GameResources.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src\DeploymentController.cs">
     <Files>
       <File FileName="src\GameMain.cs" Line="29" Column="4" />
-      <File FileName="src\DeploymentController.cs" Line="117" Column="84" />
+      <File FileName="src\DeploymentController.cs" Line="138" Column="20" />
       <File FileName="src\Model\AIPlayer.cs" Line="17" Column="4" />
       <File FileName="src\Model\BattleShipsGame.cs" Line="24" Column="17" />
       <File FileName="src\GameLogic.cs" Line="30" Column="6" />
