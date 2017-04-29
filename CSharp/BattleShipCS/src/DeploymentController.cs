@@ -135,6 +135,7 @@ namespace MyGame
 		/// </summary>
 		public static void DrawDeployment ()
 		{
+			//draws the grid
 			UtilityFunctions.DrawField (GameController.HumanPlayer.PlayerGrid, GameController.HumanPlayer, true);
 
 			//Draw the Left/Right and Up/Down buttons
